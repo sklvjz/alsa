@@ -1,0 +1,19 @@
+ALSA的体系结构
+
+官方主页 http://www.alsa-project.org/
+主要跟编程相关是
+1.alsa-lib: ALSA 应用库(最常用)
+  ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.22.tar.bz2
+2.alsa-driver 一些常见芯片的ALSA驱动代码,一般内核会集成.
+  ftp://ftp.alsa-project.org/pub/driver/alsa-driver-1.0.22.1.tar.bz2
+3.alsa-firmware
+  一些DSP或ASIC的专用的微码(运在芯片之上,启动时由LINUX装入到硬件中).
+  ftp://ftp.alsa-project.org/pub/firmware/alsa-firmware-1.0.20.tar.bz2
+4.alsa-utils 一般ALSA小的测试工具.如aplay/arecord 播放和录音小程序.
+  ftp://ftp.alsa-project.org/pub/utils/alsa-utils-1.0.22.tar.bz2
+5.alsa-oss 用alsa接口模拟旧的oss接口.
+  ftp://ftp.alsa-project.org/pub/oss-lib/alsa-oss-1.0.17.tar.bz2
+
+其中alsa-driver,alsa-firwware是内核开发者所接触的东西
+而alsa-utils主要是测试一些小工具.
+因此对于一个应用程序开发者,或者嵌入式应用开发者,接触到主要是alsa-lib编译出来的库libasound.
